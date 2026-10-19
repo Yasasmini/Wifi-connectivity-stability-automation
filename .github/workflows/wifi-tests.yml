@@ -28,3 +28,11 @@ jobs:
       - name: Run WiFi unit tests
         run: |
           python -m pytest tests/unit/ -v
+      - name: Upload HTML test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wifi-html-report
+          path: reports/report.html
+          if-no-files-found: error
+     
