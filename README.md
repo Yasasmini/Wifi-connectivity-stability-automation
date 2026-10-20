@@ -33,3 +33,6 @@ Failing hardware tests save `netsh`/`ipconfig` output to `logs/`.
 One router and one Windows client. Windows reports the outcome of each Wi-Fi stage but not the
 individual beacon/auth/association/EAPOL frames; for frame-level checks add a monitor-mode
 adapter with Wireshark. Roaming and multi-AP interoperability are not covered.
+## CI Pipeline
+
+GitHub Actions runs unit tests and packages the project after successful checks.
